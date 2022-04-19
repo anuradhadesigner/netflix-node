@@ -1,14 +1,19 @@
 //Page 1
-
-List of Genres
-> http://localhost:8660/genres
+List of All movies
+> http://localhost:8260/movies
 > 
 
-List of All Movies
-> http://localhost:8660/movie
->
+List of All genres
+> http://localhost:8260/genres
+> 
 
-//Page 2
+Movies displayed with res to genres id
 
-Movie Details
->http://localhost:8660/movie/2
+> http://localhost:8260/movieInfo?genres_id=2
+> 
+
+Movie display with particular category id
+> http://localhost:8260/info/2
+
+Movies Details
+>http://localhost:8260/movies/2
