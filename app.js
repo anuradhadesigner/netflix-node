@@ -6,14 +6,14 @@ const MongoClient = mongo.MongoClient;
 const mongoUrl = "mongodb+srv://developer:developer123@cluster0.r3psx.mongodb.net/netflix-node?retryWrites=true&w=majority"
 const dotenv = require('dotenv');
 dotenv.config()
-const bodyParser = require('body-parser')
-const cors = require('cors')
+// const bodyParser = require('body-parser')
+// const cors = require('cors')
 let port = process.env.PORT || 8430;
 var db;
 
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(bodyParser.json())
-app.use(cors())
+// app.use(bodyParser.urlencoded({extended:true}))
+// app.use(bodyParser.json())
+// app.use(cors())
 
 //get req
 app.get('/',(req,res) =>{
