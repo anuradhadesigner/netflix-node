@@ -12,8 +12,8 @@ Movies displayed with res to genres id
 > https://netflix-node.herokuapp.com/movieInfo?genres_id=4
 
 Movie display with particular category id
-> http://localhost:8260/info/2
-> https://netflix-node.herokuapp.com/info/1
+> http://localhost:8260/catInfo?category_id=2
+> https://netflix-node.herokuapp.com/catInfo?category_id=4
 
 Movies Details
 > http://localhost:8260/movies/2

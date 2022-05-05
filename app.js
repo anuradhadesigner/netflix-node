@@ -68,16 +68,31 @@ app.get('/movies/:id',(req,res) =>{
 // })
 ////////////////////////////////////////////////////////////////////////////////
 
-//movie display with particular category id
-app.get('/info/:id',(req,res) =>{ 
-    let catId = Number(req.params.id)
-    console.log(catId)
-    db.collection('movies').find({category_id:catId}).toArray((err, result) =>{
+//All category
+app.get('/info',(req,res) =>{
+    db.collection('category').find().toArray((err, result) =>{
         if(err) throw err;
         res.send(result)
     })
 })
 
+//movie display with particular category id
+app.get('/catInfo', (req, res)=>
+{
+    let category = Number(req.query.category_id)
+    //to get particular genre instead of everything
+    let query = {};
+    if(category)
+    {
+        query = {"category.category_id":category}
+    }
+    console.log(">>>>>category",category)
+    db.collection('movies').find(query).toArray((err,result)=>
+    {
+        if (err) throw err;
+        res.send(result)
+    })
+})
 
 //movies displayed with res to genres
 app.get('/movieInfo', (req, res)=>
