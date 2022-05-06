@@ -56,7 +56,7 @@ app.get('/movies/:id',(req,res) =>{
         res.send(result)
     })
 })
-//////////////////////////////////////////////////////////////////////////////
+
 //movie display with particular genres id
 // app.get('/info/:id',(req,res) =>{ 
 //     let catId = Number(req.params.id)
@@ -66,7 +66,6 @@ app.get('/movies/:id',(req,res) =>{
 //         res.send(result)
 //     })
 // })
-////////////////////////////////////////////////////////////////////////////////
 
 //All category
 app.get('/info',(req,res) =>{
@@ -112,16 +111,9 @@ app.get('/movieInfo', (req, res)=>
     })
 })
 
-//Display Top rated movies
-
-
-
-
-
 // app.listen(port,() =>{
 //     console.log(`Listing to the port ${port}`)
 // })
-
 
 // connecting with mongodb
 MongoClient.connect(mongoUrl,(err,connection) =>{
